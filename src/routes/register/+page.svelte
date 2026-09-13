@@ -39,8 +39,9 @@
             <!-- INPUTS -->
             <form action="#" method="POST" class="space-y-6">
                 <div>
-                    <label for="email" class="block text-sm/6 font-medium"
-                        >Correo electrónico</label>
+                    <label for="email" class="block text-sm/6 font-medium">
+                        Correo electrónico
+                    </label>
                     <div class="mt-2">
                         <input
                             id="email"
@@ -49,7 +50,7 @@
                             required
                             autocomplete="email"
                             placeholder="correo@ejemplo.com"
-                            class="block w-full rounded-md px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6 dark:bg-neutral-950/5 dark:outline-white/5 dark:focus:outline-primary-500 border-gray-500 ring-0" />
+                            class="block w-full rounded-md px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-border focus:outline-2 focus:-outline-offset-2 focus:outline-primary sm:text-sm/6 bg-secondary border-border ring-0" />
                     </div>
                 </div>
 
@@ -62,7 +63,7 @@
                             name="password"
                             required
                             autocomplete="new-password"
-                            class="block w-full rounded-md px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6 dark:bg-neutral-950/5 dark:outline-white/5 dark:focus:outline-primary-500 border-gray-500 ring-0" />
+                            class="block w-full rounded-md px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-border focus:outline-2 focus:-outline-offset-2 focus:outline-primary sm:text-sm/6 bg-secondary border-border ring-0" />
                     </div>
                 </div>
                 <div>
@@ -75,19 +76,20 @@
                             name="confirmPassword"
                             required
                             autocomplete="new-password"
-                            class="block w-full rounded-md px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6 dark:bg-neutral-950/5 dark:outline-white/5 dark:focus:outline-primary-500 border-gray-500 ring-0" />
+                            class="block w-full rounded-md px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-border focus:outline-2 focus:-outline-offset-2 focus:outline-primary sm:text-sm/6 bg-secondary border-border ring-0" />
                     </div>
                 </div>
 
                 <div>
                     <button
                         type="submit"
-                        class="flex w-full justify-center rounded-md bg-primary-700 px-3 py-1.5 font-semibold text-neutral-50 dark:text-neutral-950 shadow-xs hover:bg-primary-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-500 dark:shadow-none dark:hover:bg-primary-400 dark:focus-visible:outline-primary-500"
+                        class="flex w-full justify-center rounded-md bg-primary px-3 py-1.5 text-accent-foreground shadow-xs hover:bg-primary/75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary hover:cursor-pointer"
                         >Registrarse</button>
                 </div>
             </form>
 
             <div>
+                <!-- TODO:CONTINUE HERE -->
                 <div class="mt-10 flex items-center gap-x-6">
                     <div class="w-full flex-1 border-t border-gray-200 dark:border-white/10"></div>
                     <p class="text-sm/6 font-medium text-nowrap">Continuar con:</p>
