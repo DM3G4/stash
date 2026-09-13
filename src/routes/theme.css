@@ -46,7 +46,7 @@
     --muted: #e4e4ec;
     --muted-foreground: #595969;
     --accent: #f97316;
-    --accent-foreground: #ffffff;
+    --accent-foreground: #030303;
     --border: rgba(0, 0, 0, 0.11);
     --ring: #f97316;
     --green-accent: #22c55e;
@@ -73,7 +73,7 @@
     --muted-foreground: #9090a0;
     /* 6.1:1 on card, 6.2:1 on bg */
     --accent: #f97316;
-    --accent-foreground: #ffffff;
+    --accent-foreground: #030303;
     --border: rgba(255, 255, 255, 0.07);
     --ring: #f97316;
     --green-accent: #22c55e;

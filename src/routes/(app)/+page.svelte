@@ -1,617 +1,168 @@
-<div class="flex flex-col gap-4">
+<div class="space-y-4">
     <div>
-        <h2 class="text-base font-semibold text-gray-900 dark:text-white">
-            Últimos 30 días
-        </h2>
-        <dl
-            class="mt-5 grid grid-cols-1 divide-gray-200 overflow-hidden rounded-lg bg-white shadow-sm md:grid-cols-3 md:divide-x md:divide-y-0 dark:divide-white/10 dark:bg-gray-800/75 dark:shadow-none dark:inset-ring dark:inset-ring-white/10"
-        >
-            <div class="px-4 py-5 sm:p-6">
-                <dt
-                    class="text-base font-normal text-gray-900 dark:text-gray-100"
-                >
-                    Total Balance
-                </dt>
-                <dd
-                    class="mt-1 flex items-baseline justify-between md:block lg:flex"
-                >
-                    <div
-                        class="flex items-baseline text-2xl font-semibold text-secondary-600 dark:text-secondary-400"
-                    >
-                        71,897
-                        <span
-                            class="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400"
-                            >from 70,946</span
-                        >
-                    </div>
-
-                    <div
-                        class="inline-flex items-baseline rounded-full bg-green-100 px-2.5 py-0.5 text-sm font-medium text-green-800 md:mt-2 lg:mt-0 dark:bg-green-400/10 dark:text-green-400"
-                    >
-                        <svg
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            data-slot="icon"
-                            aria-hidden="true"
-                            class="mr-0.5 -ml-1 size-5 shrink-0 self-center text-green-500 dark:text-green-400"
-                        >
-                            <path
-                                d="M10 17a.75.75 0 0 1-.75-.75V5.612L5.29 9.77a.75.75 0 0 1-1.08-1.04l5.25-5.5a.75.75 0 0 1 1.08 0l5.25 5.5a.75.75 0 1 1-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0 1 10 17Z"
-                                clip-rule="evenodd"
-                                fill-rule="evenodd"
-                            />
-                        </svg>
-                        <span class="sr-only"> Increased by </span>
-                        12%
-                    </div>
-                </dd>
-            </div>
-            <div class="px-4 py-5 sm:p-6">
-                <dt
-                    class="text-base font-normal text-gray-900 dark:text-gray-100"
-                >
-                    Ingresos
-                </dt>
-                <dd
-                    class="mt-1 flex items-baseline justify-between md:block lg:flex"
-                >
-                    <div
-                        class="flex items-baseline text-2xl font-semibold text-secondary-600 dark:text-secondary-400"
-                    >
-                        58.16%
-                        <span
-                            class="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400"
-                            >from 56.14%</span
-                        >
-                    </div>
-
-                    <div
-                        class="inline-flex items-baseline rounded-full bg-green-100 px-2.5 py-0.5 text-sm font-medium text-green-800 md:mt-2 lg:mt-0 dark:bg-green-400/10 dark:text-green-400"
-                    >
-                        <svg
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            data-slot="icon"
-                            aria-hidden="true"
-                            class="mr-0.5 -ml-1 size-5 shrink-0 self-center text-green-500 dark:text-green-400"
-                        >
-                            <path
-                                d="M10 17a.75.75 0 0 1-.75-.75V5.612L5.29 9.77a.75.75 0 0 1-1.08-1.04l5.25-5.5a.75.75 0 0 1 1.08 0l5.25 5.5a.75.75 0 1 1-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0 1 10 17Z"
-                                clip-rule="evenodd"
-                                fill-rule="evenodd"
-                            />
-                        </svg>
-                        <span class="sr-only"> Increased by </span>
-                        2.02%
-                    </div>
-                </dd>
-            </div>
-            <div class="px-4 py-5 sm:p-6">
-                <dt
-                    class="text-base font-normal text-gray-900 dark:text-gray-100"
-                >
-                    Gastos
-                </dt>
-                <dd
-                    class="mt-1 flex items-baseline justify-between md:block lg:flex"
-                >
-                    <div
-                        class="flex items-baseline text-2xl font-semibold text-secondary-600 dark:text-secondary-400"
-                    >
-                        24.57%
-                        <span
-                            class="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400"
-                            >from 28.62%</span
-                        >
-                    </div>
-
-                    <div
-                        class="inline-flex items-baseline rounded-full bg-red-100 px-2.5 py-0.5 text-sm font-medium text-red-800 md:mt-2 lg:mt-0 dark:bg-red-400/10 dark:text-red-400"
-                    >
-                        <svg
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            data-slot="icon"
-                            aria-hidden="true"
-                            class="mr-0.5 -ml-1 size-5 shrink-0 self-center text-red-500 dark:text-red-400"
-                        >
-                            <path
-                                d="M10 3a.75.75 0 0 1 .75.75v10.638l3.96-4.158a.75.75 0 1 1 1.08 1.04l-5.25 5.5a.75.75 0 0 1-1.08 0l-5.25-5.5a.75.75 0 1 1 1.08-1.04l3.96 4.158V3.75A.75.75 0 0 1 10 3Z"
-                                clip-rule="evenodd"
-                                fill-rule="evenodd"
-                            />
-                        </svg>
-                        <span class="sr-only"> Decreased by </span>
-                        4.05%
-                    </div>
-                </dd>
-            </div>
-        </dl>
+        <h1 class="text-xl font-semibold tracking-tight">Dashboard</h1>
+        <p class="text-sm text-[var(--muted-foreground)] mt-0.5">August 2026 overview</p>
     </div>
 
-    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
-    <h2 class="text-base font-semibold text-gray-900 dark:text-white">
-        Transacciones recientes
-    </h2>
-    <ul
-        role="list"
-        class="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-3 xl:gap-x-8"
-    >
-        <li
-            class="overflow-hidden rounded-xl outline outline-gray-200 dark:-outline-offset-1 dark:outline-white/10"
-        >
+    <!-- {/* Two-column grid on desktop */} -->
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_340px] gap-4 items-start">
+        <!-- {/* ── Left column ── */} -->
+        <div class="space-y-4">
+            <!-- {/* Balance hero */} -->
             <div
-                class="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6 dark:border-white/10 dark:bg-gray-800/50"
-            >
-                <img
-                    src="https://tailwindcss.com/plus-assets/img/logos/48x48/tuple.svg"
-                    alt="Tuple"
-                    class="size-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10 dark:bg-gray-700 dark:ring-white/10"
-                />
-                <div
-                    class="text-sm/6 font-medium text-gray-900 dark:text-white"
-                >
-                    Tuple
+                class="rounded-xl border border-[var(--border)] bg-[var(--card)] p-6 neon-border-orange relative overflow-hidden">
+                <div class="absolute inset-0 pointer-events-none">
+                    <div
+                        class="absolute -right-8 -top-8 w-48 h-48 rounded-full bg-[var(--orange-accent)]/6 blur-2xl" />
                 </div>
-                <el-dropdown class="relative ml-auto">
-                    <button
-                        class="relative block text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-white"
-                    >
-                        <span class="absolute -inset-2.5"></span>
-                        <span class="sr-only">Open options</span>
-                        <svg
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            data-slot="icon"
-                            aria-hidden="true"
-                            class="size-5"
-                        >
-                            <path
-                                d="M3 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM8.5 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM15.5 8.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
-                            />
-                        </svg>
-                    </button>
-                    <el-menu
-                        anchor="bottom end"
-                        popover
-                        class="w-32 origin-top-right rounded-md bg-white py-2 shadow-lg outline-1 outline-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(0.5)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
-                    >
-                        <a
-                            href="#"
-                            class="block px-3 py-1 text-sm/6 text-gray-900 focus:bg-gray-50 focus:outline-hidden dark:text-white dark:focus:bg-white/5"
-                            >View<span class="sr-only">, Tuple</span></a
-                        >
-                        <a
-                            href="#"
-                            class="block px-3 py-1 text-sm/6 text-gray-900 focus:bg-gray-50 focus:outline-hidden dark:text-white dark:focus:bg-white/5"
-                            >Edit<span class="sr-only">, Tuple</span></a
-                        >
-                    </el-menu>
-                </el-dropdown>
+                <p
+                    class="text-xs font-medium text-[var(--muted-foreground)] uppercase tracking-widest">
+                    Total Balance
+                </p>
+                <p class="text-4xl font-semibold mono mt-2 tracking-tight">
+                    <!-- {fmt(totalBalance)} -->
+                </p>
+                <div class="flex items-center gap-3 mt-3">
+                    <div class="flex items-center gap-1.5">
+                        <!-- <TrendUpIcon class="text-[var(--green-text)]" /> -->
+                        <span class="text-[var(--green-text)] text-xs font-medium">+2.4%</span>
+                        <span class="text-[var(--muted-foreground)] text-xs">vs last month</span>
+                    </div>
+                    <div class="h-3 w-px bg-[var(--border)]" />
+                    <span class="text-[var(--muted-foreground)] text-xs">
+                        <!-- {accounts.length} accounts -->
+                    </span>
+                </div>
             </div>
-            <dl
-                class="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm/6 dark:divide-white/10"
-            >
-                <div class="flex justify-between gap-x-4 py-3">
-                    <dt class="text-gray-500 dark:text-gray-400">
-                        Last invoice
-                    </dt>
-                    <dd class="text-gray-700 dark:text-gray-300">
-                        <time datetime="2022-12-13">December 13, 2022</time>
-                    </dd>
-                </div>
-                <div class="flex justify-between gap-x-4 py-3">
-                    <dt class="text-gray-500 dark:text-gray-400">Amount</dt>
-                    <dd class="flex items-start gap-x-2">
-                        <div class="font-medium text-gray-900 dark:text-white">
-                            $2,000.00
-                        </div>
-                        <div
-                            class="rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset dark:bg-red-500/10 dark:text-red-400 dark:ring-red-500/10"
-                        >
-                            Overdue
-                        </div>
-                    </dd>
-                </div>
-            </dl>
-        </li>
-        <li
-            class="overflow-hidden rounded-xl outline outline-gray-200 dark:-outline-offset-1 dark:outline-white/10"
-        >
-            <div
-                class="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6 dark:border-white/10 dark:bg-gray-800/50"
-            >
-                <img
-                    src="https://tailwindcss.com/plus-assets/img/logos/48x48/savvycal.svg"
-                    alt="SavvyCal"
-                    class="size-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10 dark:bg-gray-700 dark:ring-white/10"
-                />
+
+            <!-- {/* Recent transactions */} -->
+            <div class="rounded-xl border border-[var(--border)] bg-[var(--card)] overflow-hidden">
                 <div
-                    class="text-sm/6 font-medium text-gray-900 dark:text-white"
-                >
-                    SavvyCal
+                    class="flex items-center justify-between px-4 py-3.5 border-b border-[var(--border)]">
+                    <h2 class="text-sm font-semibold">Recent Transactions</h2>
+                    <!-- <Link to="/transactions" class="text-xs text-[var(--orange-text)] hover:opacity-80 flex items-center gap-1">
+                View all <ArrowUpRightIcon />
+              </Link> -->
                 </div>
-                <el-dropdown class="relative ml-auto">
-                    <button
-                        class="relative block text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-white"
-                    >
-                        <span class="absolute -inset-2.5"></span>
-                        <span class="sr-only">Open options</span>
-                        <svg
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            data-slot="icon"
-                            aria-hidden="true"
-                            class="size-5"
-                        >
-                            <path
-                                d="M3 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM8.5 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM15.5 8.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
-                            />
-                        </svg>
-                    </button>
-                    <el-menu
-                        anchor="bottom end"
-                        popover
-                        class="w-32 origin-top-right rounded-md bg-white py-2 shadow-lg outline-1 outline-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(0.5)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
-                    >
-                        <a
-                            href="#"
-                            class="block px-3 py-1 text-sm/6 text-gray-900 focus:bg-gray-50 focus:outline-hidden dark:text-white dark:focus:bg-white/5"
-                            >View<span class="sr-only">, SavvyCal</span></a
-                        >
-                        <a
-                            href="#"
-                            class="block px-3 py-1 text-sm/6 text-gray-900 focus:bg-gray-50 focus:outline-hidden dark:text-white dark:focus:bg-white/5"
-                            >Edit<span class="sr-only">, SavvyCal</span></a
-                        >
-                    </el-menu>
-                </el-dropdown>
-            </div>
-            <dl
-                class="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm/6 dark:divide-white/10"
-            >
-                <div class="flex justify-between gap-x-4 py-3">
-                    <dt class="text-gray-500 dark:text-gray-400">
-                        Last invoice
-                    </dt>
-                    <dd class="text-gray-700 dark:text-gray-300">
-                        <time datetime="2023-01-22">January 22, 2023</time>
-                    </dd>
-                </div>
-                <div class="flex justify-between gap-x-4 py-3">
-                    <dt class="text-gray-500 dark:text-gray-400">Amount</dt>
-                    <dd class="flex items-start gap-x-2">
-                        <div class="font-medium text-gray-900 dark:text-white">
-                            $14,000.00
-                        </div>
-                        <div
-                            class="rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset dark:bg-green-500/10 dark:text-green-500 dark:ring-green-500/10"
-                        >
-                            Paid
-                        </div>
-                    </dd>
-                </div>
-            </dl>
-        </li>
-        <li
-            class="overflow-hidden rounded-xl outline outline-gray-200 dark:-outline-offset-1 dark:outline-white/10"
-        >
-            <div
-                class="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6 dark:border-white/10 dark:bg-gray-800/50"
-            >
-                <img
-                    src="https://tailwindcss.com/plus-assets/img/logos/48x48/reform.svg"
-                    alt="Reform"
-                    class="size-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10 dark:bg-gray-700 dark:ring-white/10"
-                />
+                <!-- {/* Table header — desktop only */} -->
                 <div
-                    class="text-sm/6 font-medium text-gray-900 dark:text-white"
-                >
-                    Reform
+                    class="hidden md:grid grid-cols-[1fr_120px_80px_90px] gap-2 px-4 py-2 border-b border-[var(--border)]">
+                    <!-- {["Merchant", "Category", "Date", "Amount"].map((h) => (
+                <span key={h} class="text-[10px] font-medium text-[var(--muted-foreground)] uppercase tracking-wider">{h}</span>
+              ))} -->
                 </div>
-                <el-dropdown class="relative ml-auto">
-                    <button
-                        class="relative block text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-white"
-                    >
-                        <span class="absolute -inset-2.5"></span>
-                        <span class="sr-only">Open options</span>
-                        <svg
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            data-slot="icon"
-                            aria-hidden="true"
-                            class="size-5"
-                        >
-                            <path
-                                d="M3 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM8.5 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM15.5 8.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
-                            />
-                        </svg>
-                    </button>
-                    <el-menu
-                        anchor="bottom end"
-                        popover
-                        class="w-32 origin-top-right rounded-md bg-white py-2 shadow-lg outline-1 outline-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(0.5)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
-                    >
-                        <a
-                            href="#"
-                            class="block px-3 py-1 text-sm/6 text-gray-900 focus:bg-gray-50 focus:outline-hidden dark:text-white dark:focus:bg-white/5"
-                            >View<span class="sr-only">, Reform</span></a
-                        >
-                        <a
-                            href="#"
-                            class="block px-3 py-1 text-sm/6 text-gray-900 focus:bg-gray-50 focus:outline-hidden dark:text-white dark:focus:bg-white/5"
-                            >Edit<span class="sr-only">, Reform</span></a
-                        >
-                    </el-menu>
-                </el-dropdown>
+                <div class="divide-y divide-[var(--border)]">
+                    <!-- {recentTxns.map((t) => (
+                <div key={t.id} class="flex md:grid md:grid-cols-[1fr_120px_80px_90px] items-center gap-3 md:gap-2 px-4 py-3 hover:bg-[var(--secondary)] transition-colors">
+                  {/* Merchant */}
+                  <div class="flex items-center gap-3 min-w-0 flex-1">
+                    <div class="w-8 h-8 rounded-lg bg-[var(--secondary)] flex items-center justify-center text-sm flex-shrink-0">
+                      {categoryIcons[t.category] ?? "📦"}
+                    </div>
+                    <p class="text-sm font-medium truncate">{t.description}</p>
+                  </div>
+                  {/* Category */}
+                  <div class="hidden md:block">
+                    <span class="text-[11px] text-[var(--muted-foreground)] border border-[var(--border)] px-2 py-0.5 rounded-full">{t.category}</span>
+                  </div>
+                  {/* Date */}
+                  <p class="hidden md:block text-xs text-[var(--muted-foreground)]">
+                    {new Date(t.date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+                  </p>
+                  {/* Amount */}
+                  <p class={`text-sm font-semibold mono flex-shrink-0 md:text-right ${t.type === "income" ? "text-[var(--green-text)]" : ""}`}>
+                    {t.type === "income" ? "+" : "−"}{fmt(t.amount)}
+                  </p>
+                  {/* Mobile: category + date */}
+                  <div class="md:hidden flex-shrink-0 text-right">
+                    <p class="text-[11px] text-[var(--muted-foreground)]">
+                      {t.category} · {new Date(t.date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+                    </p>
+                  </div>
+                </div>
+              ))} -->
+                </div>
             </div>
-            <dl
-                class="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm/6 dark:divide-white/10"
-            >
-                <div class="flex justify-between gap-x-4 py-3">
-                    <dt class="text-gray-500 dark:text-gray-400">
-                        Last invoice
-                    </dt>
-                    <dd class="text-gray-700 dark:text-gray-300">
-                        <time datetime="2023-01-23">January 23, 2023</time>
-                    </dd>
+        </div>
+
+        <!-- {/* ── Right column ── */} -->
+        <div class="space-y-4">
+            <!-- {/* Stat cards */} -->
+            <div class="grid grid-cols-2 md:grid-cols-1 gap-3">
+                <div class="rounded-xl border bg-[var(--card)] p-4 neon-border-green">
+                    <div class="flex items-center justify-between mb-1">
+                        <p class="text-xs text-[var(--muted-foreground)]">Monthly Income</p>
+                        <!-- <TrendUpIcon class="text-[var(--green-text)]" /> -->
+                    </div>
+                    <p class="text-2xl font-semibold mono">
+                        <!-- {fmt(monthlyIncome)} -->
+                    </p>
+                    <p class="text-xs mt-1 text-[var(--green-text)]">+12% vs last month</p>
                 </div>
-                <div class="flex justify-between gap-x-4 py-3">
-                    <dt class="text-gray-500 dark:text-gray-400">Amount</dt>
-                    <dd class="flex items-start gap-x-2">
-                        <div class="font-medium text-gray-900 dark:text-white">
-                            $7,600.00
-                        </div>
-                        <div
-                            class="rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset dark:bg-green-500/10 dark:text-green-500 dark:ring-green-500/10"
-                        >
-                            Paid
-                        </div>
-                    </dd>
+
+                <div class="rounded-xl border bg-[var(--card)] p-4 neon-border-orange">
+                    <div class="flex items-center justify-between mb-1">
+                        <p class="text-xs text-[var(--muted-foreground)]">Monthly Expenses</p>
+                        <!-- <TrendDownIcon class="text-[var(--orange-text)]" /> -->
+                    </div>
+                    <p class="text-2xl font-semibold mono">
+                        <!-- {fmt(monthlyExpenses)} -->
+                    </p>
+                    <p class="text-xs mt-1 text-[var(--muted-foreground)]">−3% vs last month</p>
                 </div>
-            </dl>
-        </li>
-    </ul>
-    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
-    <ul
-        role="list"
-        class="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-3 xl:gap-x-8"
-    >
-        <li
-            class="overflow-hidden rounded-xl outline outline-gray-200 dark:-outline-offset-1 dark:outline-white/10"
-        >
-            <div
-                class="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6 dark:border-white/10 dark:bg-gray-800/50"
-            >
-                <img
-                    src="https://tailwindcss.com/plus-assets/img/logos/48x48/tuple.svg"
-                    alt="Tuple"
-                    class="size-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10 dark:bg-gray-700 dark:ring-white/10"
-                />
+
                 <div
-                    class="text-sm/6 font-medium text-gray-900 dark:text-white"
-                >
-                    Tuple
-                </div>
-                <el-dropdown class="relative ml-auto">
-                    <button
-                        class="relative block text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-white"
-                    >
-                        <span class="absolute -inset-2.5"></span>
-                        <span class="sr-only">Open options</span>
-                        <svg
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            data-slot="icon"
-                            aria-hidden="true"
-                            class="size-5"
-                        >
-                            <path
-                                d="M3 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM8.5 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM15.5 8.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
-                            />
-                        </svg>
-                    </button>
-                    <el-menu
-                        anchor="bottom end"
-                        popover
-                        class="w-32 origin-top-right rounded-md bg-white py-2 shadow-lg outline-1 outline-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(0.5)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
-                    >
-                        <a
-                            href="#"
-                            class="block px-3 py-1 text-sm/6 text-gray-900 focus:bg-gray-50 focus:outline-hidden dark:text-white dark:focus:bg-white/5"
-                            >View<span class="sr-only">, Tuple</span></a
-                        >
-                        <a
-                            href="#"
-                            class="block px-3 py-1 text-sm/6 text-gray-900 focus:bg-gray-50 focus:outline-hidden dark:text-white dark:focus:bg-white/5"
-                            >Edit<span class="sr-only">, Tuple</span></a
-                        >
-                    </el-menu>
-                </el-dropdown>
-            </div>
-            <dl
-                class="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm/6 dark:divide-white/10"
-            >
-                <div class="flex justify-between gap-x-4 py-3">
-                    <dt class="text-gray-500 dark:text-gray-400">
-                        Last invoice
-                    </dt>
-                    <dd class="text-gray-700 dark:text-gray-300">
-                        <time datetime="2022-12-13">December 13, 2022</time>
-                    </dd>
-                </div>
-                <div class="flex justify-between gap-x-4 py-3">
-                    <dt class="text-gray-500 dark:text-gray-400">Amount</dt>
-                    <dd class="flex items-start gap-x-2">
-                        <div class="font-medium text-gray-900 dark:text-white">
-                            $2,000.00
-                        </div>
+                    class="col-span-2 md:col-span-1 rounded-xl border border-[var(--border)] bg-[var(--card)] p-4">
+                    <p class="text-xs text-[var(--muted-foreground)] mb-1">Savings Rate</p>
+                    <p class="text-2xl font-semibold mono">
+                        <!-- {savingsRate.toFixed(1)}% -->
+                    </p>
+                    <div class="mt-3 h-1.5 rounded-full bg-[var(--secondary)] overflow-hidden">
                         <div
-                            class="rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-red-600/10 ring-inset dark:bg-red-500/10 dark:text-red-400 dark:ring-red-500/10"
-                        >
-                            Overdue
-                        </div>
-                    </dd>
+                            class="h-full rounded-full bg-[var(--green-accent)] transition-all duration-700" />
+                        <!--
+                            style={{ width: `${Math.min(savingsRate, 100)}%` }}
+                            -->
+                    </div>
+                    <p class="text-[10px] text-[var(--muted-foreground)] mt-1.5">
+                        of income saved this month
+                    </p>
                 </div>
-            </dl>
-        </li>
-        <li
-            class="overflow-hidden rounded-xl outline outline-gray-200 dark:-outline-offset-1 dark:outline-white/10"
-        >
-            <div
-                class="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6 dark:border-white/10 dark:bg-gray-800/50"
-            >
-                <img
-                    src="https://tailwindcss.com/plus-assets/img/logos/48x48/savvycal.svg"
-                    alt="SavvyCal"
-                    class="size-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10 dark:bg-gray-700 dark:ring-white/10"
-                />
+            </div>
+
+            <!-- {/* Accounts */} -->
+            <div class="rounded-xl border border-[var(--border)] bg-[var(--card)] overflow-hidden">
                 <div
-                    class="text-sm/6 font-medium text-gray-900 dark:text-white"
-                >
-                    SavvyCal
+                    class="flex items-center justify-between px-4 py-3.5 border-b border-[var(--border)]">
+                    <h2 class="text-sm font-semibold">Accounts</h2>
+                    <!-- <Link to="/accounts" class="text-xs text-[var(--orange-text)] hover:opacity-80 flex items-center gap-1">
+                View all <ArrowUpRightIcon />
+              </Link> -->
                 </div>
-                <el-dropdown class="relative ml-auto">
-                    <button
-                        class="relative block text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-white"
-                    >
-                        <span class="absolute -inset-2.5"></span>
-                        <span class="sr-only">Open options</span>
-                        <svg
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            data-slot="icon"
-                            aria-hidden="true"
-                            class="size-5"
-                        >
-                            <path
-                                d="M3 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM8.5 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM15.5 8.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
-                            />
-                        </svg>
-                    </button>
-                    <el-menu
-                        anchor="bottom end"
-                        popover
-                        class="w-32 origin-top-right rounded-md bg-white py-2 shadow-lg outline-1 outline-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(0.5)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
-                    >
-                        <a
-                            href="#"
-                            class="block px-3 py-1 text-sm/6 text-gray-900 focus:bg-gray-50 focus:outline-hidden dark:text-white dark:focus:bg-white/5"
-                            >View<span class="sr-only">, SavvyCal</span></a
-                        >
-                        <a
-                            href="#"
-                            class="block px-3 py-1 text-sm/6 text-gray-900 focus:bg-gray-50 focus:outline-hidden dark:text-white dark:focus:bg-white/5"
-                            >Edit<span class="sr-only">, SavvyCal</span></a
-                        >
-                    </el-menu>
-                </el-dropdown>
+                <!-- {/* Allocation bar */} -->
+                <div class="px-4 py-3 border-b border-[var(--border)]">
+                    <div class="flex rounded-full overflow-hidden h-1.5 gap-px">
+                        <!-- {accounts.filter((a) => a.balance > 0).map((a) => (
+                  <div
+                    key={a.id}
+                    class="h-full first:rounded-l-full last:rounded-r-full"
+                    style={{ width: `${(a.balance / totalAssets) * 100}%`, backgroundColor: a.color }}
+                  />
+                ))} -->
+                    </div>
+                </div>
+                <div class="divide-y divide-[var(--border)]">
+                    <!-- {accounts.map((acc) => (
+                <div key={acc.id} class="flex items-center gap-3 px-4 py-3 hover:bg-[var(--secondary)] transition-colors">
+                  <div class="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: acc.color }} />
+                  <p class="text-sm flex-1 truncate">{acc.name}</p>
+                  <p class={`text-sm font-semibold mono ${acc.balance < 0 ? "text-[var(--red-text)]" : ""}`}>
+                    {fmt(acc.balance)}
+                  </p>
+                </div>
+              ))} -->
+                </div>
             </div>
-            <dl
-                class="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm/6 dark:divide-white/10"
-            >
-                <div class="flex justify-between gap-x-4 py-3">
-                    <dt class="text-gray-500 dark:text-gray-400">
-                        Last invoice
-                    </dt>
-                    <dd class="text-gray-700 dark:text-gray-300">
-                        <time datetime="2023-01-22">January 22, 2023</time>
-                    </dd>
-                </div>
-                <div class="flex justify-between gap-x-4 py-3">
-                    <dt class="text-gray-500 dark:text-gray-400">Amount</dt>
-                    <dd class="flex items-start gap-x-2">
-                        <div class="font-medium text-gray-900 dark:text-white">
-                            $14,000.00
-                        </div>
-                        <div
-                            class="rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset dark:bg-green-500/10 dark:text-green-500 dark:ring-green-500/10"
-                        >
-                            Paid
-                        </div>
-                    </dd>
-                </div>
-            </dl>
-        </li>
-        <li
-            class="overflow-hidden rounded-xl outline outline-gray-200 dark:-outline-offset-1 dark:outline-white/10"
-        >
-            <div
-                class="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6 dark:border-white/10 dark:bg-gray-800/50"
-            >
-                <img
-                    src="https://tailwindcss.com/plus-assets/img/logos/48x48/reform.svg"
-                    alt="Reform"
-                    class="size-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10 dark:bg-gray-700 dark:ring-white/10"
-                />
-                <div
-                    class="text-sm/6 font-medium text-gray-900 dark:text-white"
-                >
-                    Reform
-                </div>
-                <el-dropdown class="relative ml-auto">
-                    <button
-                        class="relative block text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-white"
-                    >
-                        <span class="absolute -inset-2.5"></span>
-                        <span class="sr-only">Open options</span>
-                        <svg
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            data-slot="icon"
-                            aria-hidden="true"
-                            class="size-5"
-                        >
-                            <path
-                                d="M3 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM8.5 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM15.5 8.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
-                            />
-                        </svg>
-                    </button>
-                    <el-menu
-                        anchor="bottom end"
-                        popover
-                        class="w-32 origin-top-right rounded-md bg-white py-2 shadow-lg outline-1 outline-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(0.5)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
-                    >
-                        <a
-                            href="#"
-                            class="block px-3 py-1 text-sm/6 text-gray-900 focus:bg-gray-50 focus:outline-hidden dark:text-white dark:focus:bg-white/5"
-                            >View<span class="sr-only">, Reform</span></a
-                        >
-                        <a
-                            href="#"
-                            class="block px-3 py-1 text-sm/6 text-gray-900 focus:bg-gray-50 focus:outline-hidden dark:text-white dark:focus:bg-white/5"
-                            >Edit<span class="sr-only">, Reform</span></a
-                        >
-                    </el-menu>
-                </el-dropdown>
-            </div>
-            <dl
-                class="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm/6 dark:divide-white/10"
-            >
-                <div class="flex justify-between gap-x-4 py-3">
-                    <dt class="text-gray-500 dark:text-gray-400">
-                        Last invoice
-                    </dt>
-                    <dd class="text-gray-700 dark:text-gray-300">
-                        <time datetime="2023-01-23">January 23, 2023</time>
-                    </dd>
-                </div>
-                <div class="flex justify-between gap-x-4 py-3">
-                    <dt class="text-gray-500 dark:text-gray-400">Amount</dt>
-                    <dd class="flex items-start gap-x-2">
-                        <div class="font-medium text-gray-900 dark:text-white">
-                            $7,600.00
-                        </div>
-                        <div
-                            class="rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-green-600/20 ring-inset dark:bg-green-500/10 dark:text-green-500 dark:ring-green-500/10"
-                        >
-                            Paid
-                        </div>
-                    </dd>
-                </div>
-            </dl>
-        </li>
-    </ul>
+        </div>
+    </div>
 </div>

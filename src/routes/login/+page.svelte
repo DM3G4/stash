@@ -1,53 +1,47 @@
 <svelte:head><title>Stash - Login</title></svelte:head>
 
 <main class="flex min-h-full flex-col justify-center py-12 px-2 sm:px-6 lg:px-8">
+    <!-- BRAND HEADER -->
     <div class="sm:mx-auto sm:w-full sm:max-w-md text-center">
         <!-- LOGO -->
-        <svg
-            class="mx-auto h-12 w-auto"
-            fill="none"
-            width="32"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <g class="fill-primary-500">
+        <svg class="mx-auto h-12 w-auto" fill="none" width="32" xmlns="http://www.w3.org/2000/svg">
+            <g class="fill-primary">
                 <path d="m.599609 19.2002h9.59998v9.59999h-9.59998z" />
                 <path
                     d="m31.4004 28.7998h9.6v9.59999h-9.6z"
-                    transform="matrix(-1 0 -0 -1 62.8008 57.5996)"
-                />
-                <path
-                    d="m10.1992 19.2001 11.6-9.6v9.6l-11.6 9.6z"
-                    opacity=".2"
-                /><path
+                    transform="matrix(-1 0 -0 -1 62.8008 57.5996)" />
+                <path d="m10.1992 19.2001 11.6-9.6v9.6l-11.6 9.6z" opacity=".2" /><path
                     d="m21.7988 28.7999-11.6 9.6v-9.6l11.6-9.6z"
-                    opacity=".5"
-                /><path
+                    opacity=".5" /><path
                     d="m.599609 19.2 21.199991-19.2v9.59999l-11.6 9.60001z"
-                    opacity=".6"
-                /><path
+                    opacity=".6" /><path
                     d="m31.4004 28.8-21.2 19.2v-9.6l11.6-9.6z"
-                    opacity=".7"
-                /></g
-            >
+                    opacity=".7" /></g>
         </svg>
         <h2 class="mt-4 text-2xl/9 font-bold">Stash</h2>
-        <sub
-            class=" text-neutral-50 bg-neutral-950/60 rounded-full px-3 py-2 dark:text-neutral-500 text-sm"
-            >Toma control de tus finanzas</sub
-        >
+        <sub class="text-muted-foreground rounded-full px-3 py-2 not-even:text-sm">
+            Toma control de tus finanzas
+        </sub>
     </div>
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-120">
-        <div
-            class="bg-neutral-100/60 px-6 py-12 shadow-sm sm:rounded-lg sm:px-12 dark:bg-neutral-950/60 dark:shadow-none dark:outline dark:-outline-offset-1 dark:outline-white/10"
-        >
+        <div class="bg-card px-6 py-12 shadow-sm sm:rounded-lg sm:px-12 neon-border-orange">
+            <!-- {/* Ambient glow */} -->
+            <div class="pointer-events-none fixed inset-0 overflow-hidden -z-50">
+                <div
+                    class="absolute top-1/4 left-1/3 -translate-x-10 w-2xl h-96 rounded-full bg-orange-accent/5 blur-3xl">
+                </div>
+                <div
+                    class="absolute bottom-1/5 left-1/5 w-2xl h-72 rounded-full bg-green-accent/5 blur-3xl">
+                </div>
+            </div>
             <!-- TODO: ACTION -->
             <!-- INPUTS -->
             <form action="#" method="POST" class="space-y-6">
                 <div>
-                    <label for="email" class="block text-sm/6 font-medium"
-                        >Correo electrónico</label
-                    >
+                    <label for="email" class="block text-sm/6 font-medium">
+                        Correo electrónico
+                    </label>
                     <div class="mt-2">
                         <input
                             id="email"
@@ -56,15 +50,12 @@
                             required
                             autocomplete="email"
                             placeholder="correo@ejemplo.com"
-                            class="block w-full rounded-md px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6 dark:bg-neutral-950/5 dark:outline-white/5 dark:focus:outline-primary-500 border-gray-500 ring-0"
-                        />
+                            class="block w-full rounded-md px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-border focus:outline-2 focus:-outline-offset-2 focus:outline-primary sm:text-sm/6 bg-secondary border-border ring-0" />
                     </div>
                 </div>
 
                 <div>
-                    <label for="password" class="block text-sm/6 font-medium"
-                        >Contraseña</label
-                    >
+                    <label for="password" class="block text-sm/6 font-medium">Contraseña</label>
                     <div class="mt-2">
                         <input
                             id="password"
@@ -72,8 +63,7 @@
                             name="password"
                             required
                             autocomplete="current-password"
-                            class="block w-full rounded-md px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6 dark:bg-neutral-950/5 dark:outline-white/5 dark:focus:outline-primary-500 border-gray-500 ring-0"
-                        />
+                            class="block w-full rounded-md px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-border focus:outline-2 focus:-outline-offset-2 focus:outline-primary sm:text-sm/6 bg-secondary border-border ring-0" />
                     </div>
                 </div>
 
@@ -85,106 +75,63 @@
                                     id="remember-me"
                                     type="checkbox"
                                     name="remember-me"
-                                    class="col-start-1 row-start-1 appearance-none rounded-sm border checked:border-primary-600 checked:bg-primary-600 indeterminate:border-primary-600 indeterminate:bg-primary-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 dark:border-white/10 dark:bg-white/5 dark:checked:border-primary-500 dark:checked:bg-primary-500 dark:indeterminate:border-primary-500 dark:indeterminate:bg-primary-500 dark:focus-visible:outline-primary-500 forced-colors:appearance-auto border-gray-500 ring-0"
-                                />
+                                    class="col-start-1 row-start-1 appearance-none rounded-sm border checked:border-primary checked:bg-primary indeterminate:border-primary indeterminate:bg-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary bg-secondary forced-colors:appearance-auto border-border ring-0" />
                             </div>
                         </div>
-                        <label for="remember-me" class="block text-sm/6"
-                            >Recordarme</label
-                        >
+                        <label for="remember-me" class="block text-sm/6">Recordarme</label>
                     </div>
 
                     <!-- TODO: FORGOT ACTION -->
                     <div class="text-sm/6">
-                        <a
-                            href="#"
-                            class="font-semibold text-primary-600 hover:text-primary-500 dark:text-primary-400 dark:hover:text-primary-300"
-                            >Olvidé la contraseña</a
-                        >
+                        <a href="#" class="font-semibold text-primary hover:text-primary/75">
+                            Olvidé la contraseña
+                        </a>
                     </div>
                 </div>
 
                 <div>
                     <button
                         type="submit"
-                        class="flex w-full justify-center rounded-md bg-primary-700 px-3 py-1.5 font-semibold text-neutral-50 dark:text-neutral-950 shadow-xs hover:bg-primary-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-500 dark:shadow-none dark:hover:bg-primary-400 dark:focus-visible:outline-primary-500"
-                        >Iniciar sesión</button
-                    >
+                        class="flex w-full justify-center rounded-md bg-primary px-3 py-1.5 text-accent-foreground shadow-xs hover:bg-primary/75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary hover:cursor-pointer"
+                        >Iniciar sesión</button>
                 </div>
             </form>
 
             <div>
                 <div class="mt-10 flex items-center gap-x-6">
-                    <div
-                        class="w-full flex-1 border-t border-gray-200 dark:border-white/10"
-                    ></div>
-                    <p class="text-sm/6 font-medium text-nowrap">
-                        Continuar con:
-                    </p>
-                    <div
-                        class="w-full flex-1 border-t border-gray-200 dark:border-white/10"
-                    ></div>
+                    <div class="w-full flex-1 border-t border-gray-200 dark:border-white/10"></div>
+                    <p class="text-sm/6 font-medium text-nowrap">Continuar con:</p>
+                    <div class="w-full flex-1 border-t border-gray-200 dark:border-white/10"></div>
                 </div>
 
-                <div class="mt-6 grid grid-cols-2 gap-4">
+                <div class="mt-6 gap-4">
                     <a
                         href="/"
-                        class="flex w-full items-center justify-center gap-3 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs inset-ring inset-ring-gray-300 hover:bg-gray-50 focus-visible:inset-ring-transparent dark:bg-white/10 dark:text-white dark:shadow-none dark:inset-ring-white/5 dark:hover:bg-white/20"
-                    >
-                        <svg
-                            viewBox="0 0 24 24"
-                            aria-hidden="true"
-                            class="h-5 w-5"
-                        >
+                        class="flex items-center justify-center gap-3 w-full px-4 py-2.5 rounded-lg border border-border bg-secondary hover:bg-muted text-sm font-medium transition-all hover:border-[rgba(249,115,22,0.3)]">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5">
                             <path
                                 d="M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.125C17.9502 1.19 15.2353 0 12.0003 0C7.31028 0 3.25527 2.69 1.28027 6.60998L5.27028 9.70498C6.21525 6.86002 8.87028 4.75 12.0003 4.75Z"
-                                fill="#EA4335"
-                            />
+                                fill="#EA4335" />
                             <path
                                 d="M23.49 12.275C23.49 11.49 23.415 10.73 23.3 10H12V14.51H18.47C18.18 15.99 17.34 17.25 16.08 18.1L19.945 21.1C22.2 19.01 23.49 15.92 23.49 12.275Z"
-                                fill="#4285F4"
-                            />
+                                fill="#4285F4" />
                             <path
                                 d="M5.26498 14.2949C5.02498 13.5699 4.88501 12.7999 4.88501 11.9999C4.88501 11.1999 5.01998 10.4299 5.26498 9.7049L1.275 6.60986C0.46 8.22986 0 10.0599 0 11.9999C0 13.9399 0.46 15.7699 1.28 17.3899L5.26498 14.2949Z"
-                                fill="#FBBC05"
-                            />
+                                fill="#FBBC05" />
                             <path
                                 d="M12.0004 24.0001C15.2404 24.0001 17.9654 22.935 19.9454 21.095L16.0804 18.095C15.0054 18.82 13.6204 19.245 12.0004 19.245C8.8704 19.245 6.21537 17.135 5.2654 14.29L1.27539 17.385C3.25539 21.31 7.3104 24.0001 12.0004 24.0001Z"
-                                fill="#34A853"
-                            />
+                                fill="#34A853" />
                         </svg>
                         <span class="text-sm/6 font-semibold">Google</span>
-                    </a>
-
-                    <a
-                        href="#"
-                        class="flex w-full items-center justify-center gap-3 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs inset-ring inset-ring-gray-300 hover:bg-gray-50 focus-visible:inset-ring-transparent dark:bg-white/10 dark:text-white dark:shadow-none dark:inset-ring-white/5 dark:hover:bg-white/20"
-                    >
-                        <svg
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                            class="size-5 fill-[#24292F] dark:fill-white"
-                        >
-                            <path
-                                d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
-                                clip-rule="evenodd"
-                                fill-rule="evenodd"
-                            />
-                        </svg>
-                        <span class="text-sm/6 font-semibold">GitHub</span>
                     </a>
                 </div>
             </div>
         </div>
 
-        <p class="mt-10 text-center text-sm/6 text-gray-500 dark:text-gray-400">
+        <p class="mt-6 text-center text-sm/6 text-muted-foreground">
             No tienes cuenta?
-            <a
-                href="/register"
-                class="font-semibold text-primary-600 hover:text-primary-500 dark:text-primary-400 dark:hover:text-primary-300"
-                >Registrarse</a
-            >
+            <a href="/register" class="font-semibold text-primary hover:text-primary/70"
+                >Registrarse</a>
         </p>
     </div>
 </main>
