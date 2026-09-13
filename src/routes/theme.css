@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@font-face {
+    font-family: 'Poppins';
+    /* Define the supported weight range of your variable font */
+    font-style: normal;
+    /* Adjust the path below to point to your local file location */
+    src: url('src/lib/assets/fonts/Poppins/Poppins-Regular.ttf') format('woff2');
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-border: var(--border);
+    --color-ring: var(--ring);
+    --color-green-accent: var(--green-accent);
+    --color-orange-accent: var(--orange-accent);
+    --radius-DEFAULT: var(--radius);
+    --font-family-sans: var(--font-sans);
+    --font-family-mono: var(--font-mono);
+}
+
+:root {
+    --background: #dcdce4;
+    --foreground: #0d0d0f;
+    --card: #f0f0f5;
+    --card-foreground: #0d0d0f;
+    --primary: #f97316;
+    --primary-foreground: #ffffff;
+    --secondary: #e4e4ec;
+    --secondary-foreground: #0d0d0f;
+    --muted: #e4e4ec;
+    --muted-foreground: #595969;
+    --accent: #f97316;
+    --accent-foreground: #ffffff;
+    --border: rgba(0, 0, 0, 0.11);
+    --ring: #f97316;
+    --green-accent: #22c55e;
+    --orange-accent: #f97316;
+    /* Semantic text tokens — darker in light mode for AA compliance */
+    --green-text: #15803d;   /* green-700: 5.0:1 on white */
+    --orange-text: #c2410c;  /* orange-700: 5.2:1 on white */
+    --red-text: #b91c1c;     /* red-700: 6.5:1 on white */
+    --radius: 8px;
+    --font-sans: 'Poppins', sans-serif;
+    /*--font-mono: 'JetBrains Mono', 'Fira Code', monospace;*/
+}
+
+.dark {
+    --background: #0d0d0f;
+    --foreground: #e8e8ec;
+    --card: #141417;
+    --card-foreground: #e8e8ec;
+    --primary: #f97316;
+    --primary-foreground: #ffffff;
+    --secondary: #1e1e24;
+    --secondary-foreground: #e8e8ec;
+    --muted: #1a1a1f;
+    --muted-foreground: #9090a0;
+    /* 6.1:1 on card, 6.2:1 on bg */
+    --accent: #f97316;
+    --accent-foreground: #ffffff;
+    --border: rgba(255, 255, 255, 0.07);
+    --ring: #f97316;
+    --green-accent: #22c55e;
+    --orange-accent: #f97316;
+    /* Full vivid colors are fine on dark surfaces */
+    --green-text: #22c55e;
+    /* 8.5:1 on dark bg */
+    --orange-text: #f97316;
+    /* 6.9:1 on dark bg */
+    --red-text: #f87171;
+    /* 7.0:1 on dark bg */
+}
+
+body {
+    background-image: radial-gradient(circle, rgba(128, 128, 140, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-clip: padding-box;
+}
+
+body.dark {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+/* Neon glow borders — used sparingly */
+.neon-border-orange {
+  border: 1px solid rgba(249, 115, 22, 0.4);
+  box-shadow: 0 0 12px rgba(249, 115, 22, 0.15), inset 0 0 12px rgba(249, 115, 22, 0.03);
+}
+.neon-border-green {
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.15), inset 0 0 12px rgba(34, 197, 94, 0.03);
+}
