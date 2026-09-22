@@ -52,9 +52,12 @@
     --green-accent: #22c55e;
     --orange-accent: #f97316;
     /* Semantic text tokens — darker in light mode for AA compliance */
-    --green-text: #15803d;   /* green-700: 5.0:1 on white */
-    --orange-text: #c2410c;  /* orange-700: 5.2:1 on white */
-    --red-text: #b91c1c;     /* red-700: 6.5:1 on white */
+    --green-text: #15803d;
+    /* green-700: 5.0:1 on white */
+    --orange-text: #c2410c;
+    /* orange-700: 5.2:1 on white */
+    --red-text: #b91c1c;
+    /* red-700: 6.5:1 on white */
     --radius: 8px;
     --font-sans: 'Poppins', sans-serif;
     /*--font-mono: 'JetBrains Mono', 'Fira Code', monospace;*/
@@ -87,6 +90,11 @@
     /* 7.0:1 on dark bg */
 }
 
+html {
+    /* Mobile bottom bar safe space */
+    margin-bottom: 90px;
+}
+
 body {
     background-image: radial-gradient(circle, rgba(128, 128, 140, 0.15) 1px, transparent 1px);
     background-size: 24px 24px;
@@ -103,10 +111,11 @@ body.dark {
 
 /* Neon glow borders — used sparingly */
 .neon-border-orange {
-  border: 1px solid rgba(249, 115, 22, 0.4);
-  box-shadow: 0 0 12px rgba(249, 115, 22, 0.15), inset 0 0 12px rgba(249, 115, 22, 0.03);
+    border: 1px solid rgba(249, 115, 22, 0.4);
+    box-shadow: 0 0 12px rgba(249, 115, 22, 0.15), inset 0 0 12px rgba(249, 115, 22, 0.03);
 }
+
 .neon-border-green {
-  border: 1px solid rgba(34, 197, 94, 0.4);
-  box-shadow: 0 0 12px rgba(34, 197, 94, 0.15), inset 0 0 12px rgba(34, 197, 94, 0.03);
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.15), inset 0 0 12px rgba(34, 197, 94, 0.03);
 }
