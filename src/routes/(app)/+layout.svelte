@@ -98,14 +98,53 @@
         </div>
     </nav>
 
-    <div class="py-10">
-        <header>
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <h1 class="text-3xl font-bold tracking-tight">
-                    Dashboard <i data-lucide="layout-dashboard"></i>
-                </h1>
+    <!-- {/* Bottom nav — both mobile and desktop */} -->
+    <nav
+        class="md:hidden fixed bottom-0 inset-x-0 z-40 border-t border-[var(--border)] bg-[var(--background)]/90 backdrop-blur-md">
+        <div class="max-w-4xl md:max-w-screen-xl flex justify-center">
+            <div class="flex flex-row gap-4 p-4">
+                <!-- Current: "border-primary-600 dark:border-primary-500 text-gray-900 dark:text-white", Default: "border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 dark:hover:border-white/20 hover:text-gray-700 dark:hover:text-gray-200" -->
+                <a
+                    href="/"
+                    aria-current="page"
+                    class="flex w-1/3 flex-col gap-2 items-center border-b-2 text-sm text-primary border-primary py-auto justify-center font-bold"
+                    ><LayoutDashboard />Dashboard</a>
+
+                <a
+                    href="transactions"
+                    class="flex w-1/3 flex-col gap-2 items-center border-b-2 border-transparent text-sm px-1 pt-1 font-bold text-foreground/75 hover:border-foreground hover:text-foreground"
+                    ><ArrowLeftRight />Transacciones</a>
+                <a
+                    href="accounts"
+                    class="flex w-1/3 flex-col gap-2 items-center border-b-2 border-transparent text-sm px-1 pt-1 font-bold text-foreground/75 hover:border-foreground hover:text-foreground"
+                    ><WalletMinimal />Cuentas</a>
             </div>
-        </header>
+            <!-- {navItems.map(({ to, label, icon: Icon }) => (
+                <NavLink
+                  key={to}
+                  to={to}
+                  class={({ isActive }) =>
+                    `flex-1 flex flex-col items-center gap-1 py-3 text-[10px] font-medium transition-colors ${
+                      isActive
+                        ? "text-[var(--orange-text)]"
+                        : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
+                    }`
+                  }
+                >
+                  {({ isActive }) => (
+                    <>
+                      <span class={isActive ? "text-[var(--orange-text)]" : ""}>
+                        <Icon />
+                      </span>
+                      {label}
+                    </>
+                  )}
+                </NavLink>
+              ))} -->
+        </div>
+    </nav>
+
+    <div class="py-10">
         <main>
             <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
                 {@render children()}

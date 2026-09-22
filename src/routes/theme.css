@@ -97,6 +97,10 @@ body.dark {
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
 }
 
+.dark ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
 /* Neon glow borders — used sparingly */
 .neon-border-orange {
   border: 1px solid rgba(249, 115, 22, 0.4);
