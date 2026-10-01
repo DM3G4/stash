@@ -4,6 +4,7 @@
     import WalletMinimal from "@lucide/svelte/icons/wallet-minimal";
     import Sun from "@lucide/svelte/icons/sun";
     import { switchTheme } from "$lib/utils/theme.svelte";
+    import { page } from "$app/state";
 
     let { children } = $props();
 </script>
@@ -44,16 +45,16 @@
                     <a
                         href="/"
                         aria-current="page"
-                        class="inline-flex gap-2 items-center border-b-2 text-primary border-primary py-auto justify-center font-bold"
+                        class={`inline-flex gap-2 items-center border-b-2 ${page.url.pathname === "/" ? "text-primary border-primary py-auto justify-center font-bold" : "border-transparent px-1 pt-1 font-bold text-foreground/75 hover:border-foreground hover:text-foreground"}`}
                         ><LayoutDashboard />Dashboard</a>
 
                     <a
                         href="transactions"
-                        class="inline-flex gap-2 items-center border-b-2 border-transparent px-1 pt-1 font-bold text-foreground/75 hover:border-foreground hover:text-foreground"
+                        class={`inline-flex gap-2 items-center border-b-2 ${page.url.pathname === "/transactions" ? "text-primary border-primary py-auto justify-center font-bold" : "border-transparent px-1 pt-1 font-bold text-foreground/75 hover:border-foreground hover:text-foreground"}`}
                         ><ArrowLeftRight />Transacciones</a>
                     <a
                         href="accounts"
-                        class="inline-flex gap-2 items-center border-b-2 border-transparent px-1 pt-1 font-bold text-foreground/75 hover:border-foreground hover:text-foreground"
+                        class={`inline-flex gap-2 items-center border-b-2 ${page.url.pathname === "/accounts" ? "text-primary border-primary py-auto justify-center font-bold" : "border-transparent px-1 pt-1 font-bold text-foreground/75 hover:border-foreground hover:text-foreground"}`}
                         ><WalletMinimal />Cuentas</a>
                 </div>
                 <div class="ml-6 flex items-center">
@@ -82,15 +83,15 @@
                         <el-menu
                             anchor="bottom end"
                             popover
-                            class="w-48 origin-top-right rounded-md bg-white py-1 shadow-lg outline outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-75 data-leave:ease-in dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
-                            <a
+                            class="w-48 origin-top-right rounded-md bg-white py-1 shadow-lg outline outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-75 data-leave:ease-in dark:bg-card dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
+                            <!-- <a
                                 href="#"
                                 class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5"
-                                >Settings</a>
+                                >Settings</a> -->
                             <a
                                 href="/login"
                                 class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5"
-                                >Sign out</a>
+                                >Salir</a>
                         </el-menu>
                     </el-dropdown>
                 </div>
@@ -107,16 +108,16 @@
                 <a
                     href="/"
                     aria-current="page"
-                    class="flex w-1/3 flex-col gap-2 items-center border-b-2 text-sm text-primary border-primary py-auto justify-center font-bold"
+                    class={`flex w-1/3 flex-col gap-2 items-center border-b-2 text-sm font-bold ${page.url.pathname === "/" ? "text-primary border-primary py-auto justify-center" : "border-transparent  px-1 pt-1  text-foreground/75 hover:border-foreground hover:text-foreground"} `}
                     ><LayoutDashboard />Dashboard</a>
 
                 <a
                     href="transactions"
-                    class="flex w-1/3 flex-col gap-2 items-center border-b-2 border-transparent text-sm px-1 pt-1 font-bold text-foreground/75 hover:border-foreground hover:text-foreground"
+                    class={`flex w-1/3 flex-col gap-2 items-center border-b-2 text-sm font-bold ${page.url.pathname === "/transactions" ? "text-primary border-primary py-auto justify-center" : "border-transparent  px-1 pt-1  text-foreground/75 hover:border-foreground hover:text-foreground"} `}
                     ><ArrowLeftRight />Transacciones</a>
                 <a
                     href="accounts"
-                    class="flex w-1/3 flex-col gap-2 items-center border-b-2 border-transparent text-sm px-1 pt-1 font-bold text-foreground/75 hover:border-foreground hover:text-foreground"
+                    class={`flex w-1/3 flex-col gap-2 items-center border-b-2 text-sm font-bold ${page.url.pathname === "/accounts" ? "text-primary border-primary py-auto justify-center" : "border-transparent  px-1 pt-1  text-foreground/75 hover:border-foreground hover:text-foreground"} `}
                     ><WalletMinimal />Cuentas</a>
             </div>
             <!-- {navItems.map(({ to, label, icon: Icon }) => (
@@ -144,7 +145,7 @@
         </div>
     </nav>
 
-    <div class="py-10">
+    <div class="py-4">
         <main>
             <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
                 {@render children()}

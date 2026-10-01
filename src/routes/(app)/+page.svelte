@@ -1,12 +1,30 @@
 <script>
-    import { TrendingUp, TrendingDown, Gift } from "@lucide/svelte";
+    import {
+        getAccountBalance,
+        getBalance,
+        getIncreaseSinceLastMonth,
+        getMonthlyExpense,
+        getMonthlyIncome,
+        getMontlyExpenseSinceLastMonth,
+        getMontlyIncomeSinceLastMonth,
+        getRecentTransactions,
+        globalState,
+        savingsPercentage,
+    } from "$lib/shared/state.svelte";
+    import { TrendingUp, TrendingDown, Gift, Coins, SquareArrowOutUpRight } from "@lucide/svelte";
 </script>
 
 <div class="space-y-4">
     <div>
         <h1 class="text-xl font-semibold tracking-tight">Dashboard</h1>
         <!-- TODO: CODE DYNAMIC DATE -->
-        <p class="text-md text-muted-foreground mt-0.5">Resumen Sep-2026</p>
+        <p class="text-md text-muted-foreground mt-0.5">
+            Resumen de {new Date().toLocaleDateString("es", {
+                month: "long",
+                day: undefined,
+                year: "numeric",
+            })}
+        </p>
     </div>
 
     <!-- {/* Two-column grid on desktop */} -->
@@ -25,44 +43,47 @@
             </p>
             <p class="text-4xl font-semibold mono mt-2 tracking-tight">
                 <!-- TODO: CODE TOTAL BALANCE -->
-                <!-- {fmt(totalBalance)} -->
-                $0
+                ${getBalance().toFixed(2)}
             </p>
             <div class="flex items-center gap-3 mt-3">
                 <div class="flex items-center gap-1.5">
                     <!-- TODO: CODE STATS -->
                     <TrendingUp class="text-green-accent" />
-                    <span class="text-green-text text-sm font-medium text-green-accent"> +0% </span>
-                    <span class="text-muted-foreground text-sm">desde el mes anterior</span>
+                    <span class="text-green-text text-sm font-medium text-green-accent">
+                        {getIncreaseSinceLastMonth()}%
+                    </span>
+                    <span class="text-muted-foreground text-sm">al mes anterior</span>
                 </div>
                 <div class="h-3 w-px bg-border"></div>
                 <span class="text-muted-foreground text-sm">
                     <!-- TODO: CODE TOTAL BALANCE -->
-                    <!-- {accounts.length} accounts -->
-                    0 accounts
+                    {globalState.accounts.length} cuentas
                 </span>
             </div>
         </div>
 
-        <div class="flex flex-col  rounded-xl border bg-card p-4 neon-border-green h-full gap-3">
-            <div class="flex items-center justify-between mb-1 ">
+        <div class="flex flex-col rounded-xl border bg-card p-4 neon-border-green h-full gap-3">
+            <div class="flex items-center justify-between mb-1">
                 <p class="text-sm text-muted-foreground">Ingresos mensuales</p>
                 <TrendingUp class="text-green-accent" />
             </div>
             <p class="flex text-2xl font-semibold mono grow">
-                <!-- {fmt(monthlyIncome)} -->
-                $0
+                ${getMonthlyIncome()}
             </p>
-            <p class="text-sm mt-1 text-muted-foreground">+0% desde el mes anterior</p>
+            <p class="text-sm mt-1 text-muted-foreground">
+                {getMontlyIncomeSinceLastMonth()}% al mes anterior
+            </p>
         </div>
 
         <!-- {/* Recent transactions */} -->
         <div class="rounded-xl border border-border bg-card overflow-hidden h-full">
             <div class="flex items-center justify-between px-4 py-3.5 border-b border-border">
                 <h2 class="text-md font-semibold">Transacciones recientes</h2>
-                <!-- <Link to="/transactions" class="text-sm text-orange-text hover:opacity-80 flex items-center gap-1">
-                        View all <ArrowUpRightIcon />
-                    </Link> -->
+                <a
+                    href="/accounts"
+                    class="text-sm text-(--orange-text) hover:opacity-80 hover:underline flex items-center gap-1">
+                    Ver todas <SquareArrowOutUpRight class="scale-75" />
+                </a>
             </div>
             <!-- {/* Table header — desktop only */} -->
             <div
@@ -76,7 +97,7 @@
                 {/each}
             </div>
             <div class="divide-y divide-border">
-                {#each [1, 2, 3, 4, 5] as id}
+                {#each getRecentTransactions() as tx}
                     <!-- TODO: CODE TRANSACTION LIST -->
                     <!-- {recentTxns.map((t) => ( -->
                     <!-- key={t.id} -->
@@ -86,13 +107,13 @@
                         <div class="flex items-center gap-3 min-w-0 flex-1">
                             <div
                                 class="w-8 h-8 rounded-lg bg-secondary flex text-orange-accent/60 items-center justify-center text-md shrink-0">
-                                <Gift />
+                                <Coins />
                             </div>
-                            <p class="text-md font-medium truncate">Regalo</p>
+                            <p class="text-md font-medium truncate">{tx.description}</p>
                         </div>
                         <!-- {/* Date */} -->
                         <p class="hidden md:block text-sm text-muted-foreground">
-                            {new Date().toLocaleDateString("es", {
+                            {tx.date.toLocaleDateString("es", {
                                 month: "long",
                                 day: "numeric",
                                 year: "numeric",
@@ -101,7 +122,7 @@
                         <!-- {/* Amount */} -->
                         <!-- ${t.type === "income" ? "text-green-text" : ""} -->
                         <p class={`text-md justify-end font-semibold mono shrink-0 md:text-right `}>
-                            $10
+                            ${tx.amount}
                         </p>
                         <!-- {/* Mobile: category + date */} -->
                         <div class="md:hidden shrink-0 text-right">
@@ -128,25 +149,23 @@
                         <TrendingDown class="text-orange-accent" />
                     </div>
                     <p class="text-2xl font-semibold mono">
-                        <!-- {fmt(monthlyExpenses)} -->
-                        $0
+                        ${getMonthlyExpense()}
                     </p>
-                    <p class="text-sm mt-1 text-muted-foreground">−0% desde el mes anterior</p>
+                    <p class="text-sm mt-1 text-muted-foreground">
+                        {getMontlyExpenseSinceLastMonth()}% al mes anterior
+                    </p>
                 </div>
 
                 <div class="col-span-2 md:col-span-1 rounded-xl border border-border bg-card p-4">
                     <p class="text-sm text-muted-foreground mb-1">Porcentaje de ahorro</p>
                     <p class="text-2xl font-semibold mono">
-                        <!-- {savingsRate.toFixed(1)}% -->
-                        0%
+                        {savingsPercentage()}%
                     </p>
                     <div class="mt-3 h-1.5 rounded-full bg-secondary overflow-hidden">
                         <div
-                            class="h-full rounded-full bg-green-accent transition-all duration-700">
+                            class="h-full rounded-full bg-green-accent transition-all duration-700"
+                            style={`width: ${Math.min(savingsPercentage(), 100)}%`}>
                         </div>
-                        <!--
-                            style={{ width: `${Math.min(savingsRate, 100)}%` }}
-                            -->
                     </div>
                     <p class="text-sm text-muted-foreground mt-1.5">ingresos ahorrados este mes</p>
                 </div>
@@ -155,29 +174,42 @@
                     <div
                         class="flex items-center justify-between px-4 py-3.5 border-b border-border">
                         <h2 class="text-md font-semibold">Cuentas</h2>
-                        <!-- <Link to="/accounts" class="text-sm text-orange-text hover:opacity-80 flex items-center gap-1">
-                View all <ArrowUpRightIcon />
-              </Link> -->
+                        <a
+                            href="/accounts"
+                            class="text-sm text-(--orange-text) hover:opacity-80 hover:underline flex items-center gap-1">
+                            Ver todas <SquareArrowOutUpRight class="scale-75" />
+                        </a>
                     </div>
                     <!-- {/* Allocation bar */} -->
                     <div class="px-4 py-3 border-b border-border">
-                        <div class="flex rounded-full overflow-hidden h-1.5 gap-px">
-                            <div class="h-full first:rounded-l-full last:rounded-r-full"></div>
+                        <div class="flex h-1.5 rounded-full bg-secondary overflow-hidden">
+                            {#each globalState.accounts as acc}
+                                <div
+                                    class="h-full first:rounded-l-full last:rounded-r-full transition-all"
+                                    style={`width: ${(getAccountBalance(acc) / getBalance()) * 100}%; background-color: ${acc.color};`}
+                                    title={`${acc.name}: ${getAccountBalance(acc)}`}>
+                                </div>
+                            {/each}
                         </div>
                     </div>
                     <div class="divide-y divide-border">
-                        <div
-                            class="flex items-center gap-3 px-4 py-3 hover:bg-secondary transition-colors">
-                            <div class="w-2 h-2 rounded-full shrink-0"></div>
-                            <p class="text-md flex-1 truncate">Cuenta</p>
-                            <!-- ${acc.balance < 0 ? "text-red-text" : ""} -->
-                            <p class={`text-md font-semibold mono `}>$0</p>
-                        </div>
+                        {#each globalState.accounts as acc}
+                            <div
+                                class="flex items-center gap-3 px-4 py-3 hover:bg-secondary transition-colors">
+                                <div
+                                    class="w-2 h-2 rounded-full shrink-0"
+                                    style={`background-color: ${acc.color};`}>
+                                </div>
+                                <p class="text-md flex-1 truncate">{acc.name}</p>
+                                <!-- ${acc.balance < 0 ? "text-red-text" : ""} -->
+                                <p class={`text-md font-semibold mono `}>
+                                    ${getAccountBalance(acc)}
+                                </p>
+                            </div>
+                        {/each}
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- {/* ── Right column ── */} -->
     </div>
 </div>
