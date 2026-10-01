@@ -1,4 +1,5 @@
 <script>
+    import { resolve } from "$app/paths";
     import {
         getAccountBalance,
         getBalance,
@@ -80,7 +81,7 @@
             <div class="flex items-center justify-between px-4 py-3.5 border-b border-border">
                 <h2 class="text-md font-semibold">Transacciones recientes</h2>
                 <a
-                    href="/accounts"
+                    href={resolve('/transactions')}
                     class="text-sm text-(--orange-text) hover:opacity-80 hover:underline flex items-center gap-1">
                     Ver todas <SquareArrowOutUpRight class="scale-75" />
                 </a>
@@ -175,7 +176,7 @@
                         class="flex items-center justify-between px-4 py-3.5 border-b border-border">
                         <h2 class="text-md font-semibold">Cuentas</h2>
                         <a
-                            href="/accounts"
+                            href={resolve('/accounts')}
                             class="text-sm text-(--orange-text) hover:opacity-80 hover:underline flex items-center gap-1">
                             Ver todas <SquareArrowOutUpRight class="scale-75" />
                         </a>

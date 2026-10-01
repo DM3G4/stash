@@ -5,6 +5,7 @@
     import Sun from "@lucide/svelte/icons/sun";
     import { switchTheme } from "$lib/utils/theme.svelte";
     import { page } from "$app/state";
+    import { resolve } from "$app/paths";
 
     let { children } = $props();
 </script>
@@ -43,17 +44,17 @@
                 <div class="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
                     <!-- Current: "border-primary-600 dark:border-primary-500 text-gray-900 dark:text-white", Default: "border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 dark:hover:border-white/20 hover:text-gray-700 dark:hover:text-gray-200" -->
                     <a
-                        href="/"
+                        href={resolve("/")}
                         aria-current="page"
                         class={`inline-flex gap-2 items-center border-b-2 ${page.url.pathname === "/" ? "text-primary border-primary py-auto justify-center font-bold" : "border-transparent px-1 pt-1 font-bold text-foreground/75 hover:border-foreground hover:text-foreground"}`}
                         ><LayoutDashboard />Dashboard</a>
 
                     <a
-                        href="transactions"
+                        href={resolve("/transactions")}
                         class={`inline-flex gap-2 items-center border-b-2 ${page.url.pathname === "/transactions" ? "text-primary border-primary py-auto justify-center font-bold" : "border-transparent px-1 pt-1 font-bold text-foreground/75 hover:border-foreground hover:text-foreground"}`}
                         ><ArrowLeftRight />Transacciones</a>
                     <a
-                        href="accounts"
+                        href={resolve("/accounts")}
                         class={`inline-flex gap-2 items-center border-b-2 ${page.url.pathname === "/accounts" ? "text-primary border-primary py-auto justify-center font-bold" : "border-transparent px-1 pt-1 font-bold text-foreground/75 hover:border-foreground hover:text-foreground"}`}
                         ><WalletMinimal />Cuentas</a>
                 </div>
@@ -89,7 +90,7 @@
                                 class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5"
                                 >Settings</a> -->
                             <a
-                                href="/login"
+                                href={resolve("/login")}
                                 class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden dark:text-gray-300 dark:focus:bg-white/5"
                                 >Salir</a>
                         </el-menu>
@@ -106,17 +107,17 @@
             <div class="flex flex-row gap-4 p-4">
                 <!-- Current: "border-primary-600 dark:border-primary-500 text-gray-900 dark:text-white", Default: "border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 dark:hover:border-white/20 hover:text-gray-700 dark:hover:text-gray-200" -->
                 <a
-                    href="/"
+                    href={resolve("/")}
                     aria-current="page"
                     class={`flex w-1/3 flex-col gap-2 items-center border-b-2 text-sm font-bold ${page.url.pathname === "/" ? "text-primary border-primary py-auto justify-center" : "border-transparent  px-1 pt-1  text-foreground/75 hover:border-foreground hover:text-foreground"} `}
                     ><LayoutDashboard />Dashboard</a>
 
                 <a
-                    href="transactions"
+                    href={resolve("/transactions")}
                     class={`flex w-1/3 flex-col gap-2 items-center border-b-2 text-sm font-bold ${page.url.pathname === "/transactions" ? "text-primary border-primary py-auto justify-center" : "border-transparent  px-1 pt-1  text-foreground/75 hover:border-foreground hover:text-foreground"} `}
                     ><ArrowLeftRight />Transacciones</a>
                 <a
-                    href="accounts"
+                    href={resolve("/accounts")}
                     class={`flex w-1/3 flex-col gap-2 items-center border-b-2 text-sm font-bold ${page.url.pathname === "/accounts" ? "text-primary border-primary py-auto justify-center" : "border-transparent  px-1 pt-1  text-foreground/75 hover:border-foreground hover:text-foreground"} `}
                     ><WalletMinimal />Cuentas</a>
             </div>

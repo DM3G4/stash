@@ -1,3 +1,7 @@
+<script>
+    import { resolve } from "$app/paths";
+</script>
+
 <svelte:head><title>Stash - Register</title></svelte:head>
 
 <main class="flex min-h-full flex-col justify-center py-12 px-2 sm:px-6 lg:px-8">
@@ -97,7 +101,7 @@
 
                 <div class="mt-6 gap-4">
                     <a
-                        href="/"
+                        href={resolve("/")}
                         class="flex items-center justify-center gap-3 w-full px-4 py-2.5 rounded-lg border border-border bg-secondary hover:bg-muted text-sm font-medium transition-all hover:border-[rgba(249,115,22,0.3)]">
                         <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5">
                             <path
@@ -121,7 +125,7 @@
 
         <p class="mt-6 text-center text-sm/6 text-muted-foreground">
             Ya tienes cuenta?
-            <a href="/login" class="font-semibold text-primary hover:text-primary/70"
+            <a href={resolve("/login")} class="font-semibold text-primary hover:text-primary/70"
                 >Iniciar sesión</a>
         </p>
     </div>
